@@ -84,6 +84,11 @@ footer {
     grid-template-columns: repeat(5, 1fr); 
     gap: 20px; 
 }
+.raftimgs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
 .history {
     margin: 1rem auto;
 	display: grid;
@@ -179,3 +184,170 @@ button {
 button:hover {
     background-color: darkgreen;
 }
+
+Here's a structured HTML and CSS code snippet incorporating all your requirements:  
+
+- A call to action that directs users to the "Contact Us" page.  
+- Three detailed trip descriptions , each with a photo.  
+- A table outlining all available trips with relevant information.  
+- A multi-column layout using CSS grid for a visually appealing structure.  
+
+*HTML Code (index.html)  *
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting Trips</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h1>Ready for an Adventure?</h1>
+        <p>Contact us to book your next rafting trip!</p>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <!-- Grid Layout for Trip Descriptions -->
+    <section class="trip-container">
+        <div class="trip">
+            <img src="rafting1.jpg" alt="Rafting through rapids">
+            <h2>Extreme Rapids Adventure</h2>
+            <p>Experience intense rapids for thrill-seekers looking for a high-adrenaline adventure.</p>
+        </div>
+        <div class="trip">
+            <img src="rafting2.jpg" alt="Family rafting trip">
+            <h2>Family-Friendly Rafting</h2>
+            <p>Perfect for families who want a fun, safe, and exciting day on the water.</p>
+        </div>
+        <div class="trip">
+            <img src="rafting3.jpg" alt="Scenic river adventure">
+            <h2>Scenic River Expedition</h2>
+            <p>Enjoy breathtaking landscapes while paddling through calm and beautiful waters.</p>
+        </div>
+    </section>
+
+    <!-- Trips Table -->
+    <section class="trip-table">
+        <h2>Available Trips</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Trip Name</th>
+                    <th>Difficulty</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Extreme Rapids Adventure</td>
+                    <td>High</td>
+                    <td>4 Hours</td>
+                    <td>$120</td>
+                </tr>
+                <tr>
+                    <td>Family-Friendly Rafting</td>
+                    <td>Low</td>
+                    <td>2 Hours</td>
+                    <td>$80</td>
+                </tr>
+                <tr>
+                    <td>Scenic River Expedition</td>
+                    <td>Medium</td>
+                    <td>3 Hours</td>
+                    <td>$100</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>
+
+
+*CSS Code (styles.css)  *
+css
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Call to Action */
+.cta {
+    background-color: #0077cc;
+    color: white;
+    padding: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    color: white;
+    background-color: #ff6600;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #cc5500;
+}
+
+/* Grid Layout for Trip Descriptions */
+.trip-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.trip {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trip img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.trip h2 {
+    color: #0077cc;
+}
+
+/* Table Styling */
+.trip-table {
+    padding: 40px;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
